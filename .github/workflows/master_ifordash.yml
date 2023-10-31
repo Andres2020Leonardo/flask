@@ -65,3 +65,5 @@ jobs:
           app-name: 'ifordash'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_62725CF22553460A9D011423A24699C2 }}
+      - name: 'Run gunicorn command'
+        run: gunicorn -b 0.0.0.0:8080 app:app
